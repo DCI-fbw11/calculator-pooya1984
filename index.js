@@ -7,6 +7,17 @@ class Calc {
     this.num = this.num + numToAdd
     return this
   }
+   multiply(numToMultiply){
+    this.throwOnBadDatatype(numToMultiply)
+    this.num = this.num * numToMultiply
+    return this
+  }
+
+  divide(numToDivide){
+    this.throwOnBadDatatype(numToDivide)
+    this.num = this.num / numToDivide
+    return this
+  }
 
   throwOnBadDatatype(numToAdd) {
     if (typeof numToAdd === "string") {
